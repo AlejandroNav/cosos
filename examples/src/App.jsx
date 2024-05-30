@@ -3,10 +3,13 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Page1 from './pages/Page1';
 import Page2 from './pages/Page2';
 import Page3 from './pages/Page3';
+import MouseTracker from './components/mousetracker';
 
 const App = () => {
   return (
     <div>
+      <MouseTracker />
+      <h1>App</h1>
       <nav>
         <ul>
           <li>
