@@ -21,7 +21,7 @@
 .secondary-dot {
     width: 20px;
     height: 20px;
-    background-color: red;
+    background-color: rgb(187, 19, 19);
     border-radius: 50%;
     filter: blur(10px);
     position: absolute;
