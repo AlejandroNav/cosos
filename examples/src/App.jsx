@@ -1,28 +1,15 @@
+// src/App.jsx
 import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Page1 from './pages/Page1';
 import Page2 from './pages/Page2';
 import Page3 from './pages/Page3';
-import MouseTracker from './components/mousetracker';
+import NavBar from './components/NavBar';
 
 const App = () => {
   return (
     <div>
-      <MouseTracker />
-      <h1>App</h1>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/page1">Page 1</Link>
-          </li>
-          <li>
-            <Link to="/page2">Page 2</Link>
-          </li>
-          <li>
-            <Link to="/page3">Page 3</Link>
-          </li>
-        </ul>
-      </nav>
+      <NavBar />
       <Routes>
         <Route path="/page1" element={<Page1 />} />
         <Route path="/page2" element={<Page2 />} />
