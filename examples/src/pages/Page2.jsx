@@ -5,6 +5,7 @@ const Page2 = () => {
         <div>
             <h1>Page 2</h1>
             <p>Welcome to Page 2!</p>
+            
         </div>
     );
 };
