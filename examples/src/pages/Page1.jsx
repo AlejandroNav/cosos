@@ -22,7 +22,7 @@ const Page1 = () => {
         {" "}
         The component also includes a function to calculate the distance between
         two points, ensuring that a new sushi image is only created if the mouse
-        has moved at least 100 pixels from its last position and at least 70
+        has moved at least 70 pixels from its last position and at least 30
         milliseconds have passed since the last image was created.
       </p>
       <p>

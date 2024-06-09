@@ -1,14 +1,4 @@
-@keyframes fall {
-    0% {
-        transform: translateY(0);
-        opacity: 1;
-    }
 
-    100% {
-        transform: translateY(400px);
-        opacity: 0;
-    }
-}
 
 .primary-image {
     width: 50px;
@@ -17,6 +7,58 @@
     position: absolute;
 }
 
+
+.secondary-dot {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(187, 19, 19);
+    border-radius: 50%;
+    filter: blur(10px);
+    position: absolute;
+    pointer-events: none;
+}
+
+@keyframes fall-1 {
+    0% {
+        transform: translateY(0) scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(25px, 200px) rotateX(180deg) rotateY(270deg) rotateZ(90deg) scale(1);
+        opacity: .2;
+    }
+}
+
+@keyframes fall-2 {
+    0% {
+        transform: translate(0, 0) scale(.7);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(0px, 400px) rotate(120deg);
+        opacity: 0;
+    }
+}
+
+@keyframes fall-3 {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(400px) scale(0.5);
+        opacity: 0;
+    }
+}
+
+.primary-image {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
 
 .secondary-dot {
     width: 20px;

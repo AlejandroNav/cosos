@@ -5,6 +5,7 @@ import sushibrown from '../assets/sushibrown.png';
 import sushiorange from '../assets/sushiorange.png';
 
 const images = [sushired, sushibrown, sushiorange]; // Array of images
+const animations = ['fall-1', 'fall-2', 'fall-3']; // Array of animations
 const MAX_ELEMENTS = 50; // Maximum number of elements to keep in the queue
 
 const MouseTracker = () => {
@@ -25,12 +26,12 @@ const MouseTracker = () => {
             const now = Date.now();
             const currentPosition = { x: event.clientX, y: event.clientY };
 
-            if (now - lastMouseMoveTimeRef.current < 70) {
+            if (now - lastMouseMoveTimeRef.current < 30) {
                 // If the time since the last mouse move is less than 100ms, do nothing
                 return;
             }
 
-            if (calcDistance(lastPositionRef.current, currentPosition) >= 100) {
+            if (calcDistance(lastPositionRef.current, currentPosition) >= 70) {
                 lastMouseMoveTimeRef.current = now; // Update the last mouse move time
                 lastPositionRef.current = currentPosition; // Update the last position
 
@@ -39,6 +40,7 @@ const MouseTracker = () => {
                     x: event.clientX,
                     y: event.clientY,
                     img: images[Math.floor(Math.random() * images.length)], // Randomly select an image
+                    animation: animations[Math.floor(Math.random() * animations.length)], // Randomly select an animation
                 };
 
                 setPositions((prevPositions) => {
@@ -71,7 +73,7 @@ const MouseTracker = () => {
                     style={{
                         left: position.x, // Position the image horizontally
                         top: position.y, // Position the image vertically
-                        position: 'absolute', // Ensure the image is absolutely positioned
+                        animationName: position.animation, // Apply random animation
                     }}
                 />
             ))}
