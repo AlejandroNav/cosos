@@ -8,10 +8,10 @@ const NavBar = () => {
         <nav className="navbar">
             <ul>
                 <li>
-                    <Link to="/page1">Sushi Mouse Pointer</Link>
+                    <Link to="/page1">Sushi Mouse</Link>
                 </li>
                 <li>
-                    <Link to="/page2">Page 2</Link>
+                    <Link to="/page2">Mario Background</Link>
                 </li>
                 <li>
                     <Link to="/page3">Page 3</Link>
